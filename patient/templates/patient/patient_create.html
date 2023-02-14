@@ -1,0 +1,99 @@
+{% extends 'patient/base.html' %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<html lang="en">
+  <style>
+    
+  </style>
+  <head>
+    <title>Add patient</title>
+  </head>
+  <body style="background-image: url(https://media.istockphoto.com/id/1088991402/photo/blue-gradient-soft-background.jpg?b=1&s=170667a&w=0&k=20&c=0-y1Fp1T8Ia7w7vi1xDEC8Cbuon3UEFIMrGRPrWeKiU=);
+  background-repeat: no-repeat; background-size: cover; padding:30px 0px 20px 25rem; margin: 40px 0px 20px 0px; color: white; font-size: 20px;">
+   
+    <div class="patient_form" style="display: flex; justify-content: center; align-items: center; border: 1px solid; border-radius: 10px; width: 50%;box-shadow: 10px 5px 5px black">
+      <div class="row GB">
+        <div class="book GB">
+          <div class="book__form GB">
+            <form method="post" class="form GB">{% csrf_token %}
+              <div class="u-margin-bottom-medium GB">
+                <h2 class="heading-secondary">Add New Patient</h2>
+              </div>
+              <form method='post'>{% csrf_token %}
+              <div class="form__group GB">
+                <label for="first" class="form__label">First Name :- </label>
+               
+                {% render_field form.fname class+="form__input" placeholder='First Name' type="text" name="firstname" required="required" %}
+                {{ form.fame.errors}}
+              </div>
+              <br>
+              <div class="form__group GB">
+                <label for="last" class="form__label">Last Name :- </label>
+                
+                {% render_field form.lname  class+="form__input" placeholder='Last Name' type="text" name="lastname" required="required" %}
+                {{ form.lname.errors}}
+              </div>
+
+              <br>
+              <div class="form__group">
+                <label for="address" class="form__label">Address :- </label>
+               
+                {% render_field form.address placeholder="Address" type="text" name="address" required="required" class="form__input" %}
+							  {{ form.address.errors}}
+              </div>
+
+             <br>
+
+              
+
+              <div class="form__group">
+                <!--<input
+                  type="number"
+                  class="form__input"
+                  placeholder="Postal/Zip"
+                  id="address"
+                  required
+                />-->
+                <label for="address" class="form__label">Postal/Zip :- </label>
+                {% render_field form.zip placeholder="Postal/Zip" type="number" name="zip" required="required" class="form__input" %}
+							  {{ form.zip.errors}}
+              </div>
+        
+             <br>
+
+             
+
+              <div class="form__group">
+                <button type = "submit" class="btn btn--green" style="    background-color: aqua;
+                color: white;
+                border: 2px solid transparent;
+                font-size: 20px;
+                margin: 20px;
+                margin-left: 100px;
+                border-radius: 4px;">
+                  Add patient
+                </button>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+{% endblock content %}
+<!-- 
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">submit</button>
+</form>
+ -->
+

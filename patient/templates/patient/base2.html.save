@@ -94,19 +94,19 @@
             <ul class="footer__list">
               <li class="footer__item">
                 <!-- ========Add Links to the respective pages====== -->
-                <a style="text-decoration: none;color: white;"  href="#" class="footer__link">Company</a>
+                <a style="text-decoration:none;color:white;"  href="#" class="footer__link">Company</a>
               </li>
               <li class="footer__item">
-                <a style="text-decoration: none;color: white;"  href="#" class="footer__link">Contact Us</a>
+                <a href="#" class="footer__link">Contact Us</a>
               </li>
               <li class="footer__item">
-                <a  style="text-decoration: none;color: white;"  href="#" class="footer__link">Carrers</a>
+                <a href="#" class="footer__link">Carrers</a>
               </li>
               <li class="footer__item">
-                <a style="text-decoration: none;color: white;"  href="#" class="footer__link">Privacy Policy</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
               </li>
               <li class="footer__item">
-                <a style="text-decoration: none;color: white;"  href="#" class="footer__link">Terms</a>
+                <a href="#" class="footer__link">Terms</a>
               </li>
             </ul>
           </div>

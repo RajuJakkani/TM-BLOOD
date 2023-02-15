@@ -7,8 +7,8 @@
 <div class="patient_profile">
    
   <div class="story GB" >
-        <div  class="row GB" style="border: 1px solid; border-radius: 10px; width: 50%;box-shadow: 10px 5px 5px black">
-          <div class="col-1-of-2 GB" style="display: flex; align-items: center; justify-content: center;">
+        <div  class="row GB" style="border: 1px solid; border-radius: 10px; width: 50%;box-shadow: 10px 5px 5px black; margin-left: 15em;">
+          <div class="col-1-of-2 GB" style="display: flex; align-items: center; justify-content: center;flex-wrap: wrap;flex-direction: column; margin: 1em;align-content: center;padding: 2em;">
             <figure class="story__shape" style="float: left;">
               <img 
                 src="../static/patient/img/customer.png" height="120"
@@ -22,11 +22,11 @@
                 PATIENT NAME : {{patient.fname | title}} {{patient.lname | title}}
               </h3>
             </div>
-            <div class="col-1-of-2 GB" style="float: right;">
+            <div class="col-1-of-2 GB" style="">
               <div class="story__text" style="display: flex;">
                 <h3 class="heading-tertiary u-margin-bottom-small">
                   ADDRESS : {{patient.address}}
-                </h3>
+                </h3><br>
                 <h3 class="heading-tertiary u-margin-bottom-small">
                   ZIP : {{patient.zip}}
                 </h3>
@@ -38,8 +38,8 @@
         <br>
         <br>
         
-        <div>
-          <div class="col-1-of-3 GB">
+        <div style="margin-left: 6em;box-shadow: 5px 10px 20px black;margin-left: 6em;border: 1px solid;width: 40em;margin-left: 6em; display: flex;align-items: center;justify-content: center;flex-wrap: wrap;flex-direction:row;margin: 1em;border-radius: 1em;align-content: center;padding: 2em;">
+          <div class="col-1-of-3 GB" style="display: flex;align-items: center;justify-content: center;flex-wrap: wrap;flex-direction: column;margin: 1em;align-content: center;border:1px solid;border-radius:1em;padding: 2em;">
            <center><div style="float:left">
               <a href="">
                 <img  src="../static/patient/img/add.png" height="120" alt="" class="profile__buttons-addimg"
@@ -53,7 +53,7 @@
             </div></center>
           </div>
           
-        <div  class="col-1-of-3 GB">
+        <div  class="col-1-of-3 GB" style="margin-left: 6em;display: flex;border-radius: 1em;align-items: center;justify-content: center;flex-wrap: wrap;flex-direction: column;margin: 1em;align-content: center;padding: 2em;border: 1px solid;">
             <center><div style="float:left" class="GB">
              <img src="../static/patient/img/edit.png" height="120" alt="" class="profile__buttons-addimg" />
               <div class="GB">

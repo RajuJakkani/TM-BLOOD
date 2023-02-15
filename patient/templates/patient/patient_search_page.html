@@ -1,7 +1,8 @@
 {% extends 'patient/base.html' %}
 {% block content %}
-<body bgcolor="#D6EAF8">
-<form method="post">{% csrf_token %}
+<body style="background-image: url(https://media.istockphoto.com/id/1088991402/photo/blue-gradient-soft-background.jpg?b=1&amp;s=170667a&amp;w=0&amp;k=20&amp;c=0-y1Fp1T8Ia7w7vi1xDEC8Cbuon3UEFIMrGRPrWeKiU=);background-repeat: no-repeat; background-size: cover; color: white; font-size: 20px;">
+<div style="display: flex;justify-content: center;align-items: center;border: 1px solid;border-radius: 10px;width: 50%;box-shadow: 3px 3px 3px black;padding: 3em;margin: 5em;margin-left: 16em;flex-wrap: wrap;flex-direction: column;align-content: center;align-items: center;">
+<form method="post" >{% csrf_token %}
 
 {{form}}
 
@@ -10,9 +11,10 @@
 <br>
 {% for patient in all_patient %}
 <li>
-<a href="{% url 'patient_profile' patient.pk %}">{{patient.fname}} -  {{patient.lname}} - {{patient.address}} - {{patient.zip}}</a>
+<a href="{% url 'patient_profile' patient.pk %}" style="text-decoration:none; color:white;">{{patient.fname}} -  {{patient.lname}} - {{patient.address}} - {{patient.zip}}</a>
 <br></li><br>
 {% endfor %}
+</div>
 </body>
 {% endblock content %}
 
